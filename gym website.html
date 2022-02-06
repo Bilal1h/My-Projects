@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Website</title>
+  <style>
+    .navbar {
+      background-color: rgb(20, 20, 20);
+      border-radius: 30px;
+      
+
+    }
+
+    .navbar ul {
+      overflow: auto;
+    }
+
+    .navbar li {
+      float: left;
+      list-style: none;
+      margin: 20px 20px;
+      color: rgb(241, 241, 241);
+      padding: 10px 7px;
+
+
+
+    }
+
+    .navbar li a {
+      padding: 10px 7px;
+      text-decoration: none;
+      color: rgb(241, 241, 241);
+      font-size: 20px;
+
+
+    }
+
+    #gradient {
+
+      width: 1500px;
+      height: 1750px;
+      opacity: 50%;
+
+    }
+
+    #form {
+      display: inline-block;
+      position: absolute;
+      top: 450px;
+      right: 375px;
+      bottom: 1000px;
+      background-color: rgb(26, 26, 26);
+      Border-color: solid 2px rgb(218, 21, 21);
+      border-radius: 15px;
+      width: 750px;
+      height: 250px;
+      text-align: center;
+      padding-top: 100px;
+      margin-bottom: 500px;
+
+
+    }
+
+    .mail1 {
+      position: absolute;
+      top: 45px;
+      right: 200px;
+      background-color: whitesmoke;
+      Border-color: solid 2px black;
+      border-radius: 25px;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+
+
+    }
+
+    .mail2 {
+      position: absolute;
+      top: 130px;
+      right: 200px;
+      background-color: whitesmoke;
+      Border-color: solid 2px black;
+      border-radius: 25px;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+
+    }
+
+    .mail3 {
+      position: absolute;
+      top: 215px;
+      right: 200px;
+      background-color: whitesmoke;
+      Border-color: solid 2px black;
+      border-radius: 25px;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+    }
+
+    .mail3:hover {
+      background-color: rgb(223, 223, 223)
+    }
+
+    .mail2:hover {
+      background-color: rgb(223, 223, 223)
+    }
+
+    .mail1:hover {
+      background-color: rgb(223, 223, 223)
+    }
+
+    #register {
+      position: absolute;
+      top: 100px;
+      right: 485px;
+      font-size: 50px;
+      color: blanchedalmond;
+      text-decoration-line: underline;
+
+
+    }
+
+    #Reset {
+      position: absolute;
+      top: 270px;
+      right: 625px;
+      font-size: 25px;
+      background-color: rgb(20, 20, 20);
+      color: blanchedalmond;
+      text-decoration-line: underline;
+
+
+
+
+    }
+
+    #Submit {
+      position: absolute;
+      top: 270px;
+      right: 435px;
+      font-size: 25px;
+      background-color: rgb(20, 20, 20);
+      color: blanchedalmond;
+      text-decoration-line: underline;
+
+    }
+
+    #Reset:hover {
+      background-color: black;
+    }
+
+    #Submit:hover {
+      background-color: black;
+    }
+
+    footer {
+      width: 100%;
+
+      bottom: 0;
+      left: 0;
+      background: #111;
+    }
+
+    footer .content {
+      max-width: 1350px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    footer .content p,
+    a {
+      color: #fff;
+    }
+
+    footer .content .box {
+      width: 33%;
+      transition: all 0.4s ease;
+    }
+
+    footer .content .topic {
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+
+    }
+
+    footer .content p {
+      text-align: justify;
+    }
+
+    footer .content .lower .topic {
+      margin: 24px 0 5px 0;
+    }
+
+    footer .content .lower i {
+      padding-right: 16px;
+    }
+
+    footer .content .middle {
+      padding-left: 80px;
+    }
+
+    footer .content .middle a {
+      line-height: 32px;
+    }
+
+    footer .content .right input[type="text"] {
+      height: 45px;
+      width: 100%;
+      outline: none;
+      color: #d9d9d9;
+      background: #000;
+      border-radius: 5px;
+      padding-left: 10px;
+      font-size: 17px;
+      border: 2px solid #222222;
+    }
+
+    footer .content .right input[type="submit"] {
+      height: 42px;
+      width: 100%;
+      font-size: 18px;
+      color: #d9d9d9;
+      background: #eb2f06;
+      outline: none;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-top: 12px;
+      border: 2px solid #eb2f06;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .content .right input[type="submit"]:hover {
+      background: none;
+      color: #eb2f06;
+    }
+
+    footer .content .media-icons a {
+      font-size: 16px;
+      height: 45px;
+      width: 45px;
+      display: inline-block;
+      text-align: center;
+      line-height: 43px;
+      border-radius: 5px;
+      border: 2px solid #222222;
+      margin: 30px 5px 0 0;
+      transition: all 0.3s ease;
+    }
+
+    .content .media-icons a:hover {
+      border-color: #eb2f06;
+    }
+
+    footer .bottom {
+      width: 100%;
+      text-align: right;
+      color: #d9d9d9;
+      padding: 0 40px 5px 0;
+    }
+
+    footer .bottom a {
+      color: #eb2f06;
+    }
+
+    footer a {
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #eb2f06;
+    }
+
+    @media (max-width:1100px) {
+      footer .content .middle {
+        padding-left: 50px;
+      }
+    }
+
+    @media (max-width:950px) {
+      footer .content .box {
+        width: 50%;
+      }
+
+      .content .right {
+        margin-top: 40px;
+      }
+    }
+
+    @media (max-width:560px) {
+      footer {
+        position: relative;
+      }
+
+      footer .content .box {
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      footer .content .middle {
+        padding-left: 0;
+      }
+
+      .color:hover {
+        background-color: yellow;
+      }
+
+    }
+  </style>
+</head>
+
+<body background="gym.jpg" ; background-size="cover">
+
+
+
+  <header>
+    <nav class="navbar">
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#"> Pricng</a></li>
+        <li><a href="#">Contact Us</a></li>
+
+      </ul>
+
+    </nav>
+
+
+  </header>
+  <div class="background">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgirSefxM4qhvvYMb2k3bACwgUprLUuJ9daw&usqp=CAU"
+      alt="" id="gradient">
+
+  </div>
+  <div id="form">
+    <form>
+      <h2 id="register">Register</h2>
+      <input type="text" placeholder="Your Name Here" class="mail1"> <br>
+
+      <input type="email" placeholder="Your Email Here" class="mail2"><br>
+      <input type="password" placeholder="Your Password Here" class="mail3"><br>
+
+      <input type="reset" value="Reset" id="Reset">
+
+
+
+      <button type="submit" value="submit" id="Submit"> Submit Now</button>
+
+    </form>
+
+
+
+
+
+  </div>
+  <footer>
+    <div class="content">
+      <div class="left box">
+        <div class="upper">
+          <div class="topic">About us</div>
+          <p>Hello I am a freelance Graphic designer as well as a logo designer </p>
+        </div>
+        <div class="lower">
+          <div class="topic">Contact us</div>
+          <div class="phone">
+            <a href="#"><i class="fas fa-phone-volume"></i>+923452898684</a>
+          </div>
+          <div class="email">
+            <a href="#"><i class="fas fa-envelope"></i>muhammadbilalhaider0@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="middle box">
+        <div class="topic">Our Services</div>
+        <div><a href="#">Web Design, Development</a></div>
+        <div><a href="#">Web UX Design, Reasearch</a></div>
+        <div><a href="#">Web User Interface Design</a></div>
+        <div><a href="#">Theme Development, Design</a></div>
+        <div><a href="#">Mobile Application Design</a></div>
+        <div><a href="#">Graphic Designing</a></div>
+      </div>
+      <div class="right box">
+        <div class="topic">Subscribe us</div>
+        <form action="#">
+          <input type="text" placeholder="Enter email address" class="color">
+          <input type="submit" name="" value="Send">
+          <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">
+      <p>Copyright © 2020 <a href="#">Graphics Tank</a> All rights reserved</p>
+    </div>
+
+
+
+
+
+  </footer>
+
+</body>
+
+</html>
